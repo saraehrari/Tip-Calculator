@@ -15,11 +15,13 @@ function App(){
   const [people, setPeople] = useState(1);
   
   const Calculation = ()=>{
-   {"Tip Amount: Bill × Tip Percentage ÷ 100"}
+  const tipAmount=(Number(bill) * Number(tip))/100;
+  const totallBill =(Number(bill) + tipAmount);
+  const perPerson =(totallBill/Number(people))
+ return { tipAmount, totallBill, perPerson };
   }
 
-
-
+ 
 
 
 return(
