@@ -1,54 +1,69 @@
-import { useState } from "react"
 
-function App(){
+import { useState } from "react";
 
-{/* STATES */}
-  const[bill, setBill] = useState(0);
-  const[tip, setTip] = useState(10);
+function App() {
+  // STATES
+  const [bill, setBill] = useState("");
+  const [tip, setTip] = useState(10);
   const [people, setPeople] = useState(1);
-  
-  {/*CALCULATION*/}
-  const Calculation = ()=>{
-  const tipAmount=(Number(bill) * Number(tip))/100;
-  const totallBill =(Number(bill) + tipAmount);
-  const perPerson =(totallBill/Number(people));
-  return{ tipAmount, totallBill, perPerson };
 
-  }
-  
-  
-return(
-  <div>
-   {/* FIRST INPUT */}
-    <input
-     type="number"
-     value={bill}
-     onChange={(e)=>{
-      setBill(e.target.value)
-     }}
-     />
+  // CALCULATION
+  const Calculation = () => {
+    const tipAmount = (Number(bill) * Number(tip)) / 100;
 
-     {/* SECOND INPUT */}
-     <input
-      type="number" 
-      value={tip}
-      onChange={(e)=>{
-        setTip(e.target.value)
-      }}
+    const totallBill = Number(bill) + tipAmount;
+
+    if (people === "" || Number(people) <= 0) {
+      return {
+        tipAmount,
+        totallBill,
+        perPerson: 0,
+      };
+    }
+
+    const perPerson = totallBill / Number(people);
+
+    return { tipAmount, totallBill, perPerson };
+  };
+
+  // GET CALCULATION RESULTS
+  const { tipAmount, totallBill, perPerson } = Calculation();
+
+  return (
+    <div>
+      {/* FIRST INPUT - BILL */}
+      <input
+        type="number"
+        value={bill}
+        onChange={(e) => setBill(e.target.value)}
       />
 
-      {/* THIRD INPUT */}
+      {/* SECOND INPUT - TIP */}
       <input
-       type="number"
-       value={people}
-       onChange={(e)=>{
-        setPeople(e.target.value)
-       }}
-       />
+        type="number"
+        value={tip}
+        onChange={(e) => setTip(e.target.value)}
+      />
 
-       <p>Tip Amount: {Calculation().tipAmount}</p>
-        <p>Total Bill: {Calculation().totallBill}</p>
-         <p>Per Person: {Calculation().perPerson}</p>
-  </div>
-)}
+      {/* THIRD INPUT - PEOPLE */}
+      <input
+        type="number"
+        min="1"
+        value={people}
+        onChange={(e) => setPeople(e.target.value)}
+      />
+
+      {/* RESULTS */}
+      <p>Tip Amount: {tipAmount}</p>
+      <p>Total Bill: {totallBill}</p>
+      <p>Per Person: {perPerson}</p>
+
+      {/* ERROR MESSAGE */}
+      {Number(people) <= 0 && people !== "" && (
+        <p>Number of people must be greater than zero!</p>
+      )}
+    </div>
+  );
+}
+
 export default App;
