@@ -11,10 +11,12 @@ function App(){
   const Calculation = ()=>{
   const tipAmount=(Number(bill) * Number(tip))/100;
   const totallBill =(Number(bill) + tipAmount);
-  const perPerson =(totallBill/Number(people))
- return { tipAmount, totallBill, perPerson };
-  }
+  const perPerson =(totallBill/Number(people));
+  return{ tipAmount, totallBill, perPerson };
 
+  }
+  
+  
 return(
   <div>
    {/* FIRST INPUT */}
