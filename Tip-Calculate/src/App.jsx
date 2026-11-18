@@ -45,6 +45,8 @@ return(
        />
 
        <p>Tip Amount: {Calculation().tipAmount}</p>
+        <p>Total Bill: {Calculation().totallBill}</p>
+         <p>Per Person: {Calculation().perPerson}</p>
   </div>
 )}
 export default App;
