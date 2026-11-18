@@ -1,0 +1,77 @@
+
+/* GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background: linear-gradient(135deg, #171329, #292044);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* MAIN CONTAINER */
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#root > div {
+  background: #ffffff;
+  width: 100%;
+  max-width: 430px;
+  padding: 35px;
+  border-radius: 22px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* INPUTS */
+input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #dedbea;
+  border-radius: 10px;
+  outline: none;
+  font-size: 16px;
+  color: #292044;
+  background: #faf9fd;
+  transition: 0.3s ease;
+}
+
+input:focus {
+  border-color: #7856d8;
+  box-shadow: 0 0 0 3px rgba(120, 86, 216, 0.12);
+}
+
+/* RESULTS */
+p {
+  background: #f5f2fc;
+  padding: 15px;
+  border-radius: 10px;
+  color: #51416f;
+  font-size: 15px;
+  font-weight: 500;
+  border-left: 4px solid #7856d8;
+}
+
+/* ERROR MESSAGE */
+p:last-child {
+  color: #dc3545;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  #root > div {
+    padding: 25px 20px;
+  }
+}
