@@ -32,6 +32,7 @@ function App() {
 
   return (
     <div>
+      <h1>Tip Calculator</h1>
       {/* FIRST INPUT - BILL */}
       <input
         type="number"

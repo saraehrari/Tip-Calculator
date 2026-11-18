@@ -53,6 +53,9 @@ input:focus {
   box-shadow: 0 0 0 3px rgba(120, 86, 216, 0.12);
 }
 
+h1{
+    color: #171329;
+}
 /* RESULTS */
 p {
   background: #f5f2fc;
