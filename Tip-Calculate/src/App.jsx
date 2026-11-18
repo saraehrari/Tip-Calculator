@@ -1,12 +1,5 @@
 import { useState } from "react"
 
-
-
-
-
-
-
-
 function App(){
 
 {/* STATES */}
@@ -14,15 +7,13 @@ function App(){
   const[tip, setTip] = useState(10);
   const [people, setPeople] = useState(1);
   
+  {/*CALCULATION*/}
   const Calculation = ()=>{
   const tipAmount=(Number(bill) * Number(tip))/100;
   const totallBill =(Number(bill) + tipAmount);
   const perPerson =(totallBill/Number(people))
  return { tipAmount, totallBill, perPerson };
   }
-
- 
-
 
 return(
   <div>
@@ -52,6 +43,8 @@ return(
         setPeople(e.target.value)
        }}
        />
+
+       <p>Tip Amount: {Calculation().tipAmount}</p>
   </div>
 )}
 export default App;
