@@ -9,11 +9,14 @@ import { useState } from "react"
 
 function App(){
 
-
+{/* STATES */}
   const[bill, setBill] = useState(0);
   const[tip, setTip] = useState(10);
   const [people, setPeople] = useState(1);
-
+  
+  const Calculation = ()=>{
+   {"Tip Amount: Bill × Tip Percentage ÷ 100"}
+  }
 
 
 
