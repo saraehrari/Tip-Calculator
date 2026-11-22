@@ -5,8 +5,8 @@ import "./App.css"
 function App() {
   // STATES
   const [bill, setBill] = useState("");
-  const [tip, setTip] = useState(10);
-  const [people, setPeople] = useState(1);
+  const [tip, setTip] = useState(null);
+  const [people, setPeople] = useState(null);
 
   // CALCULATION
   const Calculation = () => {
