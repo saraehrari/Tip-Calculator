@@ -70,7 +70,16 @@ function App() {
       {Number(people) <= 0 && people !== "" && (
         <p>Number of people must be greater than zero!</p>
       )}
-    </div>
+
+      {tipAmount <= 0 & tipAmount!== "" &(
+         <p></p>
+      )}  
+
+         {tipAmount <= 0 & tipAmount!== "" &(
+         <p></p>
+      )}  
+      
+      </div>
   );
 }
 
