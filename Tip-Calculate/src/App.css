@@ -72,7 +72,17 @@ p:last-child {
   color: #dc3545;
 }
 
-/* RESPONSIVE */
+label {
+  display: block;
+  text-align: left;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  color: #292044;
+  margin-bottom: -12px;
+}
+ 
+ /* RESPONSIVE */
 @media (max-width: 480px) {
   #root > div {
     padding: 25px 20px;
