@@ -37,6 +37,7 @@ function App() {
        <label className="label">Tip Percentage (%):</label>
       <input
         type="number"
+        min="1"
         value={bill}
         placeholder="Enter bill amount"
         onChange={(e) => setBill(e.target.value)}
@@ -46,6 +47,7 @@ function App() {
        <label className="label">Tip Percentage (%):</label>
       <input
         type="number"
+        min="1"
         value={tip}
         placeholder="Enter tip percentage (%)"
         onChange={(e) => setTip(e.target.value)}
