@@ -5,8 +5,8 @@ import "./App.css"
 function App() {
   // STATES
   const [bill, setBill] = useState("");
-  const [tip, setTip] = useState(null);
-  const [people, setPeople] = useState(null);
+  const [tip, setTip] = useState("");
+  const [people, setPeople] = useState("");
 
   // CALCULATION
   const Calculation = () => {
@@ -66,19 +66,26 @@ function App() {
       <p>Total Bill: {totallBill}</p>
       <p>Per Person: {perPerson}</p>
 
-      {/* ERROR MESSAGE */}
-      {Number(people) <= 0 && people !== "" && (
-        <p>Number of people must be greater than zero!</p>
-      )}
+      {/* BILL VALIDATION */}
+{bill !== "" && Number(bill) <= 0 && (
+  <p className="error-message">
+    Please enter a valid bill amount!
+  </p>
+)}
 
-      {tipAmount <= 0 && tipAmount!== "" &&(
-         <p>Please enter a valid tip amount greater than 0.</p>
-      )}  
+{/* TIP VALIDATION */}
+{tip !== "" && Number(tip) <= 0 && (
+  <p className="error-message">
+    Please enter a valid tip percentage!
+  </p>
+)}
 
-         {totallBill <= 0 && totallBill!== "" &&(
-         <p>Please enter a valid total bill amount..</p>
-      )}  
-      
+{/* PEOPLE VALIDATION */}
+{people !== "" && Number(people) <= 0 && (
+  <p className="error-message">
+    Number of people must be greater than zero!
+  </p>
+)}
       </div>
   );
 }
