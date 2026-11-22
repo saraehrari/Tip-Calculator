@@ -71,12 +71,12 @@ function App() {
         <p>Number of people must be greater than zero!</p>
       )}
 
-      {tipAmount <= 0 & tipAmount!== "" &(
-         <p></p>
+      {tipAmount <= 0 && tipAmount!== "" &&(
+         <p>Please enter a valid tip amount greater than 0.</p>
       )}  
 
-         {tipAmount <= 0 & tipAmount!== "" &(
-         <p></p>
+         {totallBill <= 0 && totallBill!== "" &&(
+         <p>Please enter a valid total bill amount..</p>
       )}  
       
       </div>
