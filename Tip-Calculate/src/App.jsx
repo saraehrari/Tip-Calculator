@@ -34,7 +34,7 @@ function App() {
     <div>
       <h1>Tip Calculator</h1>
       {/* FIRST INPUT - BILL */}
-       <label className="input-lable">Tip Percentage (%):</label>
+       <label className="input-label ">Bill Amount ($): </label>
       <input
         type="number"
         min="1"
@@ -44,7 +44,7 @@ function App() {
       />
 
       {/* SECOND INPUT - TIP */}
-       <label input-lable>Tip Percentage (%):</label>
+       <label className="input-label ">Tip Percentage (%):</label>
       <input
         type="number"
         min="1"
@@ -54,7 +54,7 @@ function App() {
       />
 
       {/* THIRD INPUT - PEOPLE */}
-        <label input-lable>Number of People:</label>
+        <label className="input-label">Number of People:</label>
       <input
         type="number"
         min="1"
