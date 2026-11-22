@@ -37,6 +37,7 @@ function App() {
       <input
         type="number"
         value={bill}
+        placeholder="Enter bill amount"
         onChange={(e) => setBill(e.target.value)}
       />
 
@@ -44,6 +45,7 @@ function App() {
       <input
         type="number"
         value={tip}
+        placeholder="Enter tip percentage (%)"
         onChange={(e) => setTip(e.target.value)}
       />
 
@@ -52,6 +54,7 @@ function App() {
         type="number"
         min="1"
         value={people}
+        placeholder="Number of people"
         onChange={(e) => setPeople(e.target.value)}
       />
 
