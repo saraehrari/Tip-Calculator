@@ -6,6 +6,7 @@
   box-sizing: border-box;
 }
 
+
 body {
   font-family: 'Inter', Arial, sans-serif;
   background: linear-gradient(135deg, #171329, #292044);
@@ -16,15 +17,15 @@ body {
   padding: 20px;
 }
 
-/* MAIN CONTAINER */
 #root {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 #root > div {
-  background: #ffffff;
+  background:blue;
   width: 100%;
   max-width: 430px;
   padding: 35px;
@@ -54,7 +55,7 @@ input:focus {
 }
 
 h1{
-    color: #171329;
+    color: white;
 }
 /* RESULTS */
 p {
@@ -72,13 +73,15 @@ p:last-child {
   color: #dc3545;
 }
 
-label {
+
+/*INPUT-LABLE*/
+label{
   display: block;
   text-align: left;
   width: 100%;
   font-size: 14px;
   font-weight: 600;
-  color: #292044;
+  color: white;
   margin-bottom: -12px;
 }
  
